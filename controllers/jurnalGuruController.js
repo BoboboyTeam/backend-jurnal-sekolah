@@ -109,11 +109,11 @@ export default class JurnalGuruController {
           const jumlahJP = jurnal.jumlahJP ? parseInt(jurnal.jumlahJP) : 0;
           if (dataJP[monthKey]) {
             dataJP[monthKey]["jumlahJP"] += jumlahJP;
-            dataJP[monthKey]["gaji"] += jumlahJP * 8000;
+            dataJP[monthKey]["gaji"] += jumlahJP * 10000;
           } else {
             dataJP[monthKey] = {};
             dataJP[monthKey]["jumlahJP"] = jumlahJP;
-            dataJP[monthKey]["gaji"] = jumlahJP * 8000;
+            dataJP[monthKey]["gaji"] = jumlahJP * 10000;
           }
         }
       });
@@ -121,7 +121,7 @@ export default class JurnalGuruController {
         jurnal.createAt = new Date(jurnal.createAt).toDateString();
         jurnal.updateAt = new Date(jurnal.updateAt).toDateString();
       });
-      const gaji = totalJP * 8000;
+      const gaji = totalJP * 10000;
       if (jurnalGuru.length > 0) {
         return {
           nama: guru.nama,
@@ -241,11 +241,11 @@ export default class JurnalGuruController {
           const jumlahJP = jurnal.jumlahJP ? parseInt(jurnal.jumlahJP) : 0;
           if (dataJP[monthKey]) {
             dataJP[monthKey]["jumlahJP"] += jumlahJP;
-            dataJP[monthKey]["gaji"] += jumlahJP * 8000;
+            dataJP[monthKey]["gaji"] += jumlahJP * 10000;
           } else {
             dataJP[monthKey] = {};
             dataJP[monthKey]["jumlahJP"] = jumlahJP;
-            dataJP[monthKey]["gaji"] = jumlahJP * 8000;
+            dataJP[monthKey]["gaji"] = jumlahJP * 10000;
           }
         }
       });
@@ -253,7 +253,7 @@ export default class JurnalGuruController {
         jurnal.createAt = new Date(jurnal.createAt).toDateString();
         jurnal.updateAt = new Date(jurnal.updateAt).toDateString();
       });
-      const gaji = totalJP * 8000;
+      const gaji = totalJP * 10000;
       return jurnalGuru.length > 0
         ? res.status(200).json({
             totalJP,
